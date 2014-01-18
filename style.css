@@ -1,0 +1,73 @@
+/* Color palette: http://www.colourlovers.com/palette/196488/Mod_Mod_Mod_Mod */
+
+body {
+	background-color:#f0f0f0;
+}
+
+h1 {
+	margin : 0 0 0 20px;
+	font-size: 7em;
+	color: #FFF;
+	padding: 0;
+}
+
+canvas#paint {
+	height: 100%;
+	width: 100%;
+	border: 1px solid #3E5C5F;
+}
+
+textarea.input {
+	resize: none;
+	font-family: "Consolas";
+	font-size: 120%;
+	width: 98%;
+	height: 98%;
+	padding: 1%;
+	border: 1px solid #3E5C5F;
+}
+
+textarea:focus {
+	outline: none;
+}
+
+div.container {
+	margin: auto;
+	margin-top: 50px;
+	width: 1200px;
+}
+
+
+div.header {
+	float: left;
+	width: inherit;
+	height: 150px;
+	background-color: #3E5C5F;
+	outline: 1px solid #3E5C5F;
+}
+
+div.main {
+	float: left;
+	padding: 10x;
+	width: 1180px;
+	padding: 10px;
+	background-color: #FFF;
+	outline: 1px solid #3E5C5F;
+}
+
+#right {
+	margin-left:22px;
+}
+
+div.sub {
+	float: left;
+	width: 49%;
+	height: 600px;
+}
+
+div.footer {
+	float: left;
+	width: 100%;
+	height: 20px;
+}
+
