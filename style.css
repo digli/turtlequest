@@ -67,6 +67,7 @@ div.sub {
 
 div.footer {
 	float: left;
+	margin-top:5px;
 	width: 100%;
 	height: 20px;
 }
