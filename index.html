@@ -16,44 +16,64 @@
 
 	<div class="container">
 
-
 		<div class="header">
 			<h1><code>Turtle Quest</code></h1>
 		</div>
-
 
 		<div class="main">
 
 			<div class="sub">
 				<textarea id="code" spellcheck="false" rows="20" cols="50" class="input" onfocus="">
+var t = new Turtle(200, 100);
+for (var p = 0; p < 6; p++) {
+    for (var i = 0; i < 10; i++) {
+        t.forward(50);
+        t.left(60);
+        t.forward(30);
+    }
+    t.forward(80);
+}
+
+var t = new Turtle(400, 400);
+for (var p = 0; p < 6; p++) {
+    for (var i = 0; i < 5; i++) {
+        t.forward(50);
+        t.left(60);
+        t.forward(30);
+    }
+    t.forward(80);
+}
 
 var t = new Turtle(300, 300);
-
-t.forward(50);
-
-t.left(60);
-
-t.forward(30);
-
-paint.stroke();
+for (var i = 0; i < 300; i++) {
+    t.forward(i / 10);
+    t.left(5 + (i / 50));
+}
 </textarea>
 			</div>
 
+			<script>
+				var code = document.getElementById('code');
+				code.onkeydown = function(e) {
+					if (e.keyCode == 9 || event.which == 9) {
+						e.preventDefault();
+						var s = this.selectionStart;
+				        this.value = this.value.substring(0,this.selectionStart) + "    " + this.value.substring(this.selectionEnd);
+				        this.selectionEnd = s+4; 
+					}
+				}
+			</script>
+
 			<div class="sub" id="right">
-
-				<canvas id="paint">
-
-				</canvas>
-
-
+				<canvas id="paint"></canvas>
 			</div>
 
 			<div class="footer">
 				<button type="button" onclick="alert('sha')">Alert me</button>
 
-				<button type="button" onclick="drawBox()">Draw Box</button>
+				<button type="button" onclick="drawBox()">Draw box</button>
 
-				<button type="button" onclick="drawMoon()">Draw Moon</button>
+				<button type="button" onclick="drawMoon()">Draw moon</button>
 
 				<button type="button" onclick="execute()">Execute code</button>
 
@@ -61,12 +81,9 @@ paint.stroke();
 
 			</div>
 
-
 		</div>
 
-
 	</div>
-
 
 </body>
 

@@ -1,10 +1,7 @@
 
-
 // HTML Canvas Reference
 // http://www.w3schools.com/tags/ref_canvas.asp 
 	
-
-
 function calibrateCanvas() {
 	var canvas = document.getElementById('paint');
 	var style = window.getComputedStyle(paint);
@@ -16,8 +13,8 @@ function calibrateCanvas() {
 }
 
 function drawBox() {
-	var x = 60;
-	var y = 30;
+	var x = 400;
+	var y = 80;
 
 	paint.moveTo(x, y);
 
@@ -31,7 +28,7 @@ function drawBox() {
 
 function drawMoon() {
 	paint.beginPath();
-	paint.arc(300, 400, 100, 0, 2*Math.PI);
+	paint.arc(120, 400, 100, 0, 2*Math.PI);
 	paint.stroke();
 }
 
@@ -40,8 +37,9 @@ function execute() {
 
 	try {
 		eval(code);
+		paint.stroke();
 	} catch(err) {
-		alert('Syntax error');
+		alert('Syntax error (probably)');
 	}
 
 //	var temp = code.split(';');
@@ -73,4 +71,9 @@ Turtle.prototype.forward = function(distance) {
 Turtle.prototype.left = function(degrees) {
 	this.direction += degrees;
 	this.direction %= 360;
+}
+
+Turtle.prototype.moveTo = function(x, y) {
+	this.x = x;
+	this.y = y;
 }

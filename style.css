@@ -11,6 +11,10 @@ h1 {
 	padding: 0;
 }
 
+button {
+	font-family: "Consolas";
+}
+
 canvas#paint {
 	height: 100%;
 	width: 100%;
@@ -67,8 +71,7 @@ div.sub {
 
 div.footer {
 	float: left;
-	margin-top:5px;
-	width: 100%;
-	height: 20px;
+	padding-top:5px;
+	height:19px;
 }
 
