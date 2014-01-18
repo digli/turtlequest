@@ -47,3 +47,8 @@ function execute() {
 //		eval(temp[i].trim() + ";");
 //	}
 }
+
+function clearCanvas() {
+	var canvas = document.getElementById('paint');
+	canvas.width = canvas.width;
+}
