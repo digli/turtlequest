@@ -1,7 +1,7 @@
 
-// HTML Canvas Reference
-// http://www.w3schools.com/tags/ref_canvas.asp
 
+// HTML Canvas Reference
+// http://www.w3schools.com/tags/ref_canvas.asp 
 	
 
 function calibrateCanvas() {
@@ -33,4 +33,17 @@ function drawMoon() {
 	paint.beginPath();
 	paint.arc(300, 400, 100, 0, 2*Math.PI);
 	paint.stroke();
+}
+
+function execute() {
+	var paint = document.getElementById("paint").getContext("2d");
+	var code = document.getElementById('code').value;
+
+	eval(code);
+
+//	var temp = code.split(';');
+
+//	for (var i = 0; i < temp.length; i++) {
+//		eval(temp[i].trim() + ";");
+//	}
 }

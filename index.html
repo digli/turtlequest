@@ -18,22 +18,16 @@
 
 
 		<div class="header">
-			<h1><code>Turtle Quest</code></h1>
+			<h1><code>eval is evil</code></h1>
 		</div>
 
 
 		<div class="main">
 
 			<div class="sub">
-				<textarea spellcheck="false" rows="20" cols="50" class="input" onfocus="">
+				<textarea id="code" spellcheck="false" rows="20" cols="50" class="input" onfocus="">
 
-public static void main(String[] args) {
-	
-	// Type your code here
-
-	system.out.println("Hello World!");
-
-}
+drawBox();
 </textarea>
 			</div>
 
@@ -52,6 +46,8 @@ public static void main(String[] args) {
 				<button type="button" onclick="drawBox()">Draw Box</button>
 
 				<button type="button" onclick="drawMoon()">Draw Moon</button>
+
+				<button type="button" onclick="execute()">Execute code</button>
 
 			</div>
 
