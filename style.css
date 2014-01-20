@@ -1,5 +1,7 @@
 
-/* Color palette: http://www.colourlovers.com/palette/196488/Mod_Mod_Mod_Mod */
+/* Color palette: 
+ * http://www.colourlovers.com/palette/196488/Mod_Mod_Mod_Mod 
+ */
 
 body {
 	background-color:#f0f0f0;
@@ -14,6 +16,7 @@ h1 {
 
 button {
 	font-family: "Consolas";
+	font-size: 120%;
 }
 
 canvas#paint {
@@ -22,7 +25,7 @@ canvas#paint {
 	border: 1px solid #3E5C5F;
 }
 
-textarea.input {
+textarea {
 	resize: none;
 	font-family: "Consolas";
 	font-size: 120%;
@@ -37,8 +40,7 @@ textarea:focus {
 }
 
 div.container {
-	margin: auto;
-	margin-top: 20px;
+	margin: 20px auto;
 	width: 1200px;
 }
 
@@ -70,6 +72,5 @@ div.sub {
 
 div.footer {
 	float: left;
-	padding-top:5px;
-	height:19px;
+	padding-top:10px;
 }

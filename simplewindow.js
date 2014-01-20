@@ -1,9 +1,10 @@
-
-// HTML Canvas Reference
-// http://www.w3schools.com/tags/ref_canvas.asp 
-	
-// JavaScript parser
-// https://github.com/dmajda/pegjs/blob/master/examples/javascript.pegjs
+/*
+ * HTML Canvas Reference
+ * http://www.w3schools.com/tags/ref_canvas.asp 
+ *	
+ * JavaScript parser
+ * https://github.com/dmajda/pegjs/blob/master/examples/javascript.pegjs
+ */
 
 function calibrateCanvas() {
 	var canvas = document.getElementById('paint');
