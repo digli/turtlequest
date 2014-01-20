@@ -2,6 +2,9 @@
 // HTML Canvas Reference
 // http://www.w3schools.com/tags/ref_canvas.asp 
 	
+// JavaScript parser
+// https://github.com/dmajda/pegjs/blob/master/examples/javascript.pegjs
+
 function calibrateCanvas() {
 	var canvas = document.getElementById('paint');
 	var style = window.getComputedStyle(paint);
@@ -13,14 +16,15 @@ function calibrateCanvas() {
 }
 
 function drawBox() {
-	var x = 400;
-	var y = 80;
+	var x = 80;
+	var y = 420;
+	var side = 60;
 
+	paint.beginPath();
 	paint.moveTo(x, y);
-
-	paint.lineTo(x + 50, y);
-	paint.lineTo(x + 50, y + 50);
-	paint.lineTo(x, y + 50);
+	paint.lineTo(x + side, y);
+	paint.lineTo(x + side, y + side);
+	paint.lineTo(x, y + side);
 	paint.lineTo(x, y);
 
 	paint.stroke();
@@ -28,7 +32,7 @@ function drawBox() {
 
 function drawMoon() {
 	paint.beginPath();
-	paint.arc(120, 400, 100, 0, 2*Math.PI);
+	paint.arc(110, 450, 30, 0, 2*Math.PI);
 	paint.stroke();
 }
 
@@ -36,17 +40,12 @@ function execute() {
 	var code = document.getElementById('code').value;
 
 	try {
+		paint.beginPath();
 		eval(code);
 		paint.stroke();
 	} catch(err) {
 		alert('Syntax error (probably)');
 	}
-
-//	var temp = code.split(';');
-
-//	for (var i = 0; i < temp.length; i++) {
-//		eval(temp[i].trim() + ";");
-//	}
 }
 
 function clearCanvas() {
